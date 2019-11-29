@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajouter produit</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+
+function test()
+{
+
+if(document.myform.nom.value.length==0)
+{
+
+
+alert("veuillez remplir le champ");
+
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<fieldset>
+	
+<legend>Ajouter produit</legend>
+
+<form method="post" name="myform" action=ajoutProduit.php>
+	<table>
+
+<tr>
+	<td>Id produit :</td>
+<td><input type="text" name="idproduit"></td>
+
+</tr>
+
+<tr>
+	<td>Nom :</td>
+<td><input type="text" name="nom"></td>
+
+</tr>
+<tr>
+	<td>nombre de stocks:</td>
+<td><input type="text" name="nbproduit"></td>
+
+</tr>
+
+<tr>
+	<td>prix :</td>
+<td><input type="text" name="prix"></td>
+
+</tr>
+
+<tr>
+	<td>description :</td>
+<td><input type="text" name="description"></td>
+
+</tr>
+<td>Image du produit :</td>
+<td><input type="file" name="image" value="upload" name="image"></td>
+
+<tr>
+	<td>      </td>
+<td><input type="submit" name="ajouter" value="ajouter" onclick="test()"></td>
+
+</tr>
+
+
+</table>
+</form>
+
+
+
+
+</fieldset>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
