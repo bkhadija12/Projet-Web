@@ -4,6 +4,7 @@ class panier{
 	private $type;
 	
 	private $CIN;
+	
 	private $IDService;
 	
 	private $IDProduit;

@@ -28,11 +28,9 @@ class commande{
 	function getetat(){
 		return $this->etat;
 	}
-	
 	function getdate(){
 		return $this->date;
 	}
-
 	function setIDCommande($IDCommande){
 		$this->IDCommande=$IDCommande;
 	}

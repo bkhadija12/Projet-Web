@@ -15,35 +15,34 @@ $listcrim = $crim->affichercommande();
         <td>annulation</td>
 
     </tr>
-<?php
+    <?php
 
 foreach ($listcrim as $row)
 {
-      
- ?>    
-    
+    echo '
         <tr>
             
-            <td><?php echo $row["IDCommande"] ?></td>
-            <td><?php echo $row["prixTotal"] ?></td>
-            <td><?php echo $row["etat"] ?></td>
-            <td><?php echo $row["CIN"] ?></td>
-            <td><?php echo $row["date"] ?></td>
+            <td>'.$row["IDCommande"].'</td>
+            <td>'.$row["prixTotal"].'</td>
+            <td>'.$row["etat"].'</td>
+            <td>'.$row["CIN"].'</td>
+            <td>'.$row["date"].'</td>
+
             <td>
                 <form action="supprimercommande.php" method="get">
                     
-          <input type="hidden" id="IDCommande" name="IDCommande" value="<?php echo $row["IDCommande"] ?>">
-                   
+                    <input type="hidden" id="etat" name="etat" value="confirmer">
+                    <input type="hidden" id="CIN" name="CIN" value="0987663">
+                    <input type="hidden" id="IDCommande" name="IDCommande" value="'.$row["IDCommande"].'" >
+                    <input type="hidden" id="date" name="date" value="'.$row["date"].'">
+
                     <input style="background: none; border: none; color: red; text-decoration: underline;" type="submit" value="Supprimer">
                 </form>
             </td>
             
-       
-            
         </tr>
-       
-    <?php
+    ';
 }
-  
 ?>
+
 </table>

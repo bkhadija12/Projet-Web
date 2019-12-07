@@ -6,7 +6,7 @@ include "../core/commandeC.php";
     $cri=new commande($_POST["IDCommande"],$_POST["CIN"],$_POST["prixTotal"],$_POST["etat"],$_POST["date"]);
     $criC=new commandeC();
     $criC->ajoutercommande($cri);
-    header('Location: afficherpanier.php')
+    header('Location: affichercommande.php')
 /*   
 }
 else

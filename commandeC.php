@@ -5,20 +5,20 @@ class commandeC
 {
     function ajoutercommande($commande)
     {
-        $sql= "insert into project.commandes(IDCommande,CIN,prixTotal,etat,date) values (:IDCommande,:CIN,:prixTotal,:etat,:date)";
+        $sql= "insert into project.commandes(CIN,prixTotal,etat,date) values (:CIN,:prixTotal,:etat,:date)";
         $db = config::getConnexion();
         try
         {
             $req=$db->prepare($sql);
             
-            $IDCommande=$commande->getIDCommande();
+           
             $prixTotal=$commande->getprixTotal();
             $CIN=$commande->getCIN();
             $etat=$commande->getetat();
             $date=$commande->getdate();
 
           
-            $req->bindValue(':IDCommande',$IDCommande);
+           
             $req->bindValue(':prixTotal',$prixTotal);
             $req->bindValue(':CIN',$CIN);
             $req->bindValue(':etat',$etat);
@@ -38,7 +38,7 @@ class commandeC
      function affichercommande()
     {
 
-        $sql="select * from project.commandes order by IDCommande where CIN=12345";
+        $sql="select * from project.commandes  where CIN = 888";
 
         $db = config::getConnexion();
         try
@@ -53,7 +53,7 @@ class commandeC
     }
     
     function supprimercommande($IDCommande){
-        $sql="DELETE FROM commande where IDCommande= :IDCommande";
+        $sql="DELETE FROM commandes where IDCommande= :IDCommande";
         $db = config::getConnexion();
         $req=$db->prepare($sql);
         $req->bindValue(':IDCommande',$IDCommande);
@@ -65,7 +65,7 @@ class commandeC
             die('Erreur: '.$e->getMessage());
         }
 }
-    /*function modifiercommande($IDCommande,$CIN,$prixTotal,$etat,$date)
+    function modifiercommande($IDCommande,$CIN,$prixTotal,$etat,$date)
     {
         $sql="update project.commandes setprixTotal= '$prixTotal',CIN='$CIN', etat='$etat',date='$date' where IDCommande='$IDCommande'";
         $db = config::getConnexion();
@@ -78,7 +78,7 @@ class commandeC
             die('Erreur: '.$e->getMessage());
         }
     }
-    function modifiercommande1($IDCommande,$etat)
+   /* function modifiercommande1($IDCommande,$etat)
     {
         $sql="update project.commandes set  etat='$etat' where IDCommande='$IDCommande'";
         $db = config::getConnexion();
