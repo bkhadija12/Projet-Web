@@ -2,10 +2,10 @@
 include "../core/produitsC.php";
 
 
-$refp=$_POST["refp"];
+$IDProduit=$_POST["IDProduit"];
 $quantite=$_POST["quantite"];
 
 
 $crimC=new panierC();
-$crimC->modifierpanier($refp,$quantite);
+$crimC->modifierpanier($IDProduit,$quantite);
 header("location:afficherpanier.php");
