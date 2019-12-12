@@ -1,10 +1,15 @@
 <?php
 include "../core/commandeC.php";
 
-$IDCommande=$_POST["IDCommande"];
-$etat=$_POST["etat"];
+if(isset($_POST["IDCommande"]))
+{
+	$IDCommande=$_POST["IDCommande"];
 
 
 $crimC=new commandeC();
-$crimC->modifiercommande($IDCommande,$CIN,$prixTotal,$etat,$date);
-header("location:affichercommande.php");
+$crimC->modifiercommande($IDCommande);
+header("location:affichercommande_back.php");
+}
+
+
+?>

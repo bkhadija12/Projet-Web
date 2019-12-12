@@ -27,7 +27,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body print.>
 <div class="wrapper">
 	<div class="preloader"></div>
 
@@ -288,10 +288,10 @@
 			<div class="row">
 				<div class="col-xl-6 offset-xl-3 text-center">
 					<div class="breadcrumb_content">
-						<h4 class="breadcrumb_title">Shop</h4>
+						<h4 class="breadcrumb_title">panier</h4>
 						<ol class="breadcrumb">
 						    <li class="breadcrumb-item"><a href="#">Home</a></li>
-						    <li class="breadcrumb-item active" aria-current="page">Shop</li>
+						    <li class="breadcrumb-item active" aria-current="page">panier</li>
 						</ol>
 					</div>
 				</div>
@@ -303,57 +303,138 @@
 	<section class="our-team pb50">
 		<div class="container">
 			<div class="row">
+
 				
 				<?php
 					include '../core/produitsC.php';/*pour chercher une fonction*/
 					$crim = new panierC();
 					$listcrim = $crim->afficherpanier();
 				?>
-				<li>											
-				<?php
-				$D=date("Y-m-d H:i:s");
-				foreach ($listcrim as $row)
-					{
-					    echo '
-					        <tr>
-					            <td>'.$row["type"].'</td>
-					            <td>'.$row["IDProduit"].'</td>			
-        					    <td>'.$row["quantite"].'</td>			
-			            				
-					            <td>
+														
+				
+					    <div class="col-md-12 col-lg-8 col-xl-8">
+                    		<div class="cart_page_form ">
+                        		<form action="#">
+                            		<table class="table">
+                            			<thead>
+									        <tr class="carttable_row" >
+									        	<th class="cartm_title">nom</th>
+									            <th class="cartm_title">prix</th>
+				        					    <th class="cartm_title">quantité</th>
+				        					    <th class="cartm_title">Total</th>
+				        					     <th class="cartm_title">Suppression</th>
+				        					</tr>
+				        				</thead>
+				        				<tbody class="table_body">
 
-								    <form action="supprimerpanier.php" method="get">                  
-									    <input type="hidden" id="IDProduit" name="IDProduit" value="'.$row["IDProduit"].'" >
-									    <input style="background: none; border: none; color: black; text-decoration: underline;" type="submit" value="Supprimer">
+				        				<?php
+										$P=0;
+										$D=date("Y-m-d H:i:s");
+										 $idProd=0;
+										 foreach ($listcrim as $row)
+											{
+												$idProd=$row["IDProduit"];
+											    echo '
 
-									</form>
+									        <tr>
+									        	<td>
+													    		<ul class="cart_list">
+													    			<li class="list-inline-item pr15">
+													  
+													    				<form action="supprimerpanier.php" method="get"> 
+                                                                          
+																	    <input type="hidden" id="IDProduit" name="IDProduit" value="'.$row["IDProduit"].'" >
+																	    <input type="hidden"  type="submit">
+                                                                        
+																	    </form>	
+													    				
+													    			</li>
+													    			<li class="list-inline-item pr20"><a href="#"><img src="images/shop/cart1.png" alt="cart1.png">'.$row["nomP"].'</a></li>
+													    			<li class="list-inline-item"><a class="cart_title" href="#"></a></li>
+													    		</ul>
+												</td>
+											
+									            <td>'.$row["prixP"].'dt</td>
+				        					    <td>
+								<form action="modifierpanier.php" method="post">                  
 
-									<form action="modifierpanier.php" method="get">                  
-									    <input type="hidden" id="quantite" name="quantite" value="'.$row["quantite"].'" >
-									    <input style="background: none; border: none; color: red; text-decoration: underline;" type="submit" value="modifier">
-									    
-									</form>
+				        					    	<input class="cart_count text-center" min="1" type="number" name="quantite" value="'.$row["quantite"].'">				        					    
+														<input type="hidden" id="IDProduit" name="IDProduit" value="'.$row["IDProduit"].'" >
+													    
+													     								  
+														<input class="btn btn-warning" type="submit" value="modifier">	    
+													</form>
 
-							    </td>
-									            
-						    </tr>
+												</td>	
+												<td>'.$row["prixP"]*$row["quantite"].'dt</td>	
+							            				
+									            <td>
+												    <form action="supprimerpanier.php" method="get">                  
+													    <input type="hidden" id="IDProduit" name="IDProduit" value="'.$row["IDProduit"].'" >
+													    <input style="background: none; border: none; color: black; text-decoration: underline;" type="submit" value="Supprimer">
 
-						';
+													</form>									
+
+											    </td>											  
+											    
+											    	
+											    
+													            
+										    </tr>						';
+						$P+=intval($row["prixP"]*$row["quantite"]);
 					}
 				?>
+
+						    			</tbody>
+						    		</table>
+						    	</form>
+						    </div>
+						</div>
+
 				</li>
-				<form action="ajoutercommande.php"  method="post">						                
-					<input type="hidden" id="prixTotal" name="prixTotal" value="25">
-											          
+				<div class="col-lg-4 col-xl-4">
+					<div class="order_sidebar_widget mb30">
+						<h4 class="title">Total panier</h4>
+						<ul>
+							<li class="subtitle"><p>Total <span class="float-right totals color-orose"><?php echo $P ?>Dt</span></p></li>
+						</ul>
+					</div>
+					<div class="ui_kit_button payment_widget_btn">
+					
+					<form action="ajoutercommande.php"  method="post">	
+					    
+
+					<input type="hidden" id="prixTotal" name="prixTotal" value="<?php echo $P ?>">
+
+												          
 					<input type="hidden" id="etat" name="etat" value="EN ATTENTE DE CONFIRMATION">
 					<input type="hidden" id="date" name="date" value="<?php echo $D ?>">
 					<input type="hidden" id="CIN" name="CIN" value="0888">
-					<button style="position: relative;left: 890px ;bottom: 1px">
-				   		<input style="background: none; border: none; color: red; text-decoration: underline;" type="submit" value="Passer commande">
-					</button>
+						<input type="hidden" id="IDProduit" name="IDProduit" value="<?php echo $idProd; ?>">
+					   <?php if($listcrim->rowCount()>0)
+					   {
+					   	echo '<input  class="btn dbxshad btn-lg btn-thm3 circle btn-block" type="submit" value="Passer commande">';
+
+					   }
+					   else{
+					   		echo '<input  class="btn dbxshad btn-lg btn-thm3 circle btn-block" type="submit" value="Passer commande" disabled>';
+
+					   } ?>
+					
 				</form>	
+				</div>
+				</div>
+                <?php  
+                if($P!=0)
+                {
+                	?>
+				
+				<?php
+			}
+			?>
 				
 			</div>
+
 		</div>
 	</section>
 

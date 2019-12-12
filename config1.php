@@ -1,5 +1,5 @@
 <?php
-class config
+class config1
 {
     private static $instance = NULL;
 

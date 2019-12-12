@@ -303,70 +303,88 @@
     <section class="our-team pb50">
         <div class="container">
             <div class="row">
-                <h1>Les Commandes : </h1>
+                <div class="my_setting_content_header">
+                    <div class="my_sch_title">
+                        <h1 class="m0">Mes commandes :</h1>
+                    </div>
+                </div>
                 <?php
+                include '../core/commandeC.php';
+                $crim = new commandeC();
+                $listcrim = $crim->affichercommande();
+                ?>
+                <div class="my_setting_content_details pb0">
+                    <div class="cart_page_form style2">
+                        <form action="#">
+                            <table class="table table-responsive">
+                                <thead>
+                                    <tr class="carttable_row">
+                                        <th class="cartm_title">produit</th>
+                                        <th class="cartm_title">Prix</th>
+                                        <th class="cartm_title">Description</th>
+                                        <th class="cartm_title">CIN du client</th>
+                                        <th class="cartm_title">Date</th>
+                                        <th class="cartm_title">Annulation</th>
+                                    </tr>
+                                </thead>  
+                                <?php
+                                $S=0;
+                                $total=0;
+                                foreach ($listcrim as $row)
+                                   
+                                {
+                                    ?>
+                                <tr>     
 
-include '../core/commandeC.php';
+                                    <td></td>
+                                    <td><?php  $total+=1;
+                                     echo $row["prixTotal"]?>dt</td>
+                                    <td><?php 
+                                        if($row['etat']==0 ) {
+                                        echo '<spam class="badge badge-warning">en attente</spam>';
 
-$crim = new commandeC();
-$listcrim = $crim->affichercommande();
-?>
-<table border="2">
-    <tr>
-      
-        <td>IDCommande</td>
-        <td>prix</td>
-        <td>description</td>
-        <td>quantite</td>
-        <td>annulation</td>
+                                        }
+                                        else
+                                        {
 
-    </tr>
-    <?php
+                                           echo' <spam class="badge badge-success">valider</spam>';
+                                        }
+                                        ?>
 
-foreach ($listcrim as $row)
-{
-    echo '
-        <tr>
-            
-            <td>'.$row["IDCommande"].'</td>
-            <td>'.$row["prixTotal"].'</td>
-            <td>'.$row["etat"].'</td>
-            <td>'.$row["CIN"].'</td>
-            <td>'.$row["date"].'
+                                        </td>
+                                    <td><?php echo $row["CIN"]?></td>
+                                    <td><?php echo $row["date"]?>
+                                    
+                                    </td>
+                                    <?php
+                                    echo
+                                    '
+                                    <td>
+                                        <form action="supprimercommande.php" method="get">
+                                                                
+                                            <input type="hidden" id="etat" name="etat" value="0">
+                                            <input type="hidden" id="CIN" name="CIN" value="0987663">
+                                            <input type="hidden" id="IDCommande" name="IDCommande" value="'.$row["IDCommande"].'" >
+                                            <input type="hidden" id="date" name="date" value="'.$row["date"].'">
 
-            <form action="modifiercommande.php" method="get">
-                    
-                    <input type="hidden" id="etat" name="etat" value="confirmer">
-                    <input type="hidden" id="CIN" name="CIN" value="0987663">
-                    <input type="hidden" id="IDCommande" name="IDCommande" value="'.$row["IDCommande"].'" >
-                    <input type="hidden" id="date" name="date" value="'.$row["date"].'">
-
-                    <input style="background: none; border: none; color: blue; text-decoration: underline;" type="submit" value="modifier">
-                </form>
-
-                </td>
-
-            <td>
-                <form action="supprimercommande.php" method="get">
-                    
-                    <input type="hidden" id="etat" name="etat" value="confirmer">
-                    <input type="hidden" id="CIN" name="CIN" value="0987663">
-                    <input type="hidden" id="IDCommande" name="IDCommande" value="'.$row["IDCommande"].'" >
-                    <input type="hidden" id="date" name="date" value="'.$row["date"].'">
-
-                    <input style="background: none; border: none; color: red; text-decoration: underline;" type="submit" value="Supprimer">
-                </form>
-            </td>
-            
-        </tr>
-    ';
-}
-?>
-
-</table>
-                </li>
-                
-                
+                                            <input style="background: none; border: none; color: red; text-decoration: underline;" type="submit" value="annuler">
+                                        </form>
+                                    </td>
+                                    '
+                                    ?>
+                                                            
+                                </tr>
+                                <?php
+                            }
+                                 $S=$S+intval($row["prixTotal"]);
+                                
+                                 
+                                ?>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <h4 style="float:right;">Le total des commandes est  <?php  echo($total) ; ?> d'un Prix Total qui vaut à <?php echo $S ?> DT </h4> 
             </div>
         </div>
     </section>

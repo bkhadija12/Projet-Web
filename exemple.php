@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+
 <!-- Mirrored from grandetest.com/theme/edumy-html/page-shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 14:50:46 GMT -->
 <head>
 <meta charset="utf-8">
@@ -93,6 +94,7 @@
 		            <li>
 		                <a href="afficherproduit.php"><span class="title">store</span></a>		                
 		            </li>
+		 
 
 		        </ul>
 		        <ul class="sign_up_btn pull-right dn-smd mt20">
@@ -301,59 +303,8 @@
 	<section class="our-team pb50">
 		<div class="container">
 			<div class="row">
-				
-				<?php
+					<!-- ya sofiene ebda menna !! -->
 
-include '../core/produitC.php';/*pour chercher une fonction*/
-
-$crim = new produitC();
-$listcrim = $crim->afficherproduit();
-?>
-<table border="2">
-    <tr>
-      
-        <td>Nom</td>
-        <td>prix</td>
-        <td>description</td>
-        <td>nbProduit</td>
-        <td>IDProduit</td>
-
-    </tr>
-<?php
-
-foreach ($listcrim as $row)
-{
-    echo '
-        <tr>
-            
-            <td>'.$row["nom"].'</td>
-            <td>'.$row["prix"].'</td>
-            <td>'.$row["description"].'</td>
-            <td>'.$row["nbProduit"].'</td>
-            <td>'.$row["IDProduit"].'</td>
-
-            <td>
-                <form action="ajouterpanier.php" method="post">
-                    
-                    <input type="hidden" id="type" name="type" value="produit">
-                    <input type="hidden" id="CIN" name="CIN" value="0987663">
-                    <input type="hidden" id="IDProduit" name="IDProduit" value="'.$row["IDProduit"].'" >
-                    <input type="hidden" id="IDService" name="IDService" value="123">
-                     <input type="hidden" id="quantite" name="quantite" value="1">
-                     <input type="hidden" id="nomP" name="nomP" value="'.$row["nom"].'">
-                     <input type="hidden" id="prixP" name="prixP" value="'.$row["prix"].'">
-
-
-                    <input style="background: none; border: none; color: black; text-decoration: underline;" type="submit" value="Acheter">
-                </form>
-            </td>
-            
-        </tr>
-    ';
-}
-?>
-</table>
-	
 				
 			</div>
 		</div>

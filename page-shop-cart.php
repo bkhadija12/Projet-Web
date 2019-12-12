@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<!-- Mirrored from grandetest.com/theme/edumy-html/page-shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 14:50:46 GMT -->
+
+<!-- Mirrored from grandetest.com/theme/edumy-html/page-shop-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 14:50:48 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,67 +48,68 @@
 		        <a href="#" class="navbar_brand float-left dn-smd">
 		            <img class="logo1 img-fluid" src="images/header-logo.png" alt="header-logo.png">
 		            <img class="logo2 img-fluid" src="images/header-logo2.png" alt="header-logo2.png">
-		            <span>Marifaa</span>
+		            <span>edumy</span>
 		        </a>
 		        <!-- Responsive Menu Structure-->
 		        <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
 		        <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
 		            <li>
 		                <a href="#"><span class="title">Accueil</span></a>
-		                <!-- Level Two-->
-		                <ul>
-		                    <li><a href="Préparatoire.html">Préparatoire</a></li>
-		                    <li><a href="primaire.html">primaire</a></li>		           
-		                </ul>
-		                
-		            </li>
-		            <li>
-		                <a href="#"><span class="title">Qui somme nous</span></a>
-	                	<ul>
-		                    <li><a href="historique.html">historique</a></li>
-		                    <li><a href="palmarès.html">palmarès</a></li>
+                        <!-- Level Two-->
+                        <ul>
+                            <li><a href="Préparatoire.html">Préparatoire</a></li>
+                            <li><a href="primaire.html">primaire</a></li>                  
+                        </ul>
+                        
+                    </li>
+                    <li>
+                        <a href="#"><span class="title">Qui somme nous</span></a>
+                        <ul>
+                            <li><a href="historique.html">historique</a></li>
+                            <li><a href="palmarès.html">palmarès</a></li>
                             <li><a href="staff.html">staff</a></li>
-	                	</ul>
-		            </li>
-		            <li>
-		                <a href="#"><span class="title">Vie scolaire</span></a>
-		                <ul>
-		                    <li><a href="#">Activités</a>
-		                    	<ul>
-		                    		<a href="Culturelle.html">Culturelle</a>
-		                    		<a href="Sportif.html">Sportif</a>
-		                    		<a href="Club.html">Club</a>
-		                    	</ul>
-		                    </li>
-		                    <li><a href="#">Services</a>
-		                    	<ul>
-		                    		<a href="Cantine.html">Cantine</a>
-		                    		<a href="Garderie.html">Garderie</a>
-		                    		<a href="Transport.html">Transport</a>
-		                    	</ul>
-		                    </li>
-		                    <li><a href="Evénements.html">Evénements</a></li>		                    
-		                    <li><a href="Excursions.html">Excursions</a></li>
-		                </ul>
-		            </li>
-		            <li>
-		                <a href="afficherproduit.php"><span class="title">store</span></a>		                
-		            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span class="title">Vie scolaire</span></a>
+                        <ul>
+                            <li><a href="#">Activités</a>
+                                <ul>
+                                    <a href="Culturelle.html">Culturelle</a>
+                                    <a href="Sportif.html">Sportif</a>
+                                    <a href="Club.html">Club</a>
+                                </ul>
+                            </li>
+                            <li><a href="#">Services</a>
+                                <ul>
+                                    <a href="Cantine.html">Cantine</a>
+                                    <a href="Garderie.html">Garderie</a>
+                                    <a href="Transport.html">Transport</a>
+                                </ul>
+                            </li>
+                            <li><a href="Evénements.html">Evénements</a></li>                           
+                            <li><a href="Excursions.html">Excursions</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="afficherproduit.php"><span class="title">store</span></a>                      
+                    </li>
+         
 
-		        </ul>
-		        <ul class="sign_up_btn pull-right dn-smd mt20">
-	                <li class="list-inline-item list_s">
-	                	<a href="#" class="btn flaticon-user" data-toggle="modal" data-target="#exampleModalCenter"> 
-	                		<span class="dn-lg">Login/Register</span>
-	                	</a>
-	                </li>
-	                <li class="list-inline-item list_s">
-	                	<div class="cart_btn">
-							<ul class="cart">
-								<li>
-									<a href="afficherpanier.php" class="btn cart_btn flaticon-shopping-bag"></a>
+                </ul>
+                <ul class="sign_up_btn pull-right dn-smd mt20">
+                    <li class="list-inline-item list_s">
+                        <a href="#" class="btn flaticon-user" data-toggle="modal" data-target="#exampleModalCenter"> 
+                            <span class="dn-lg">Login/Register</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item list_s">
+                        <div class="cart_btn">
+                            <ul class="cart">
+                                <li>
+                                    <a href="afficherpanier.php" class="btn cart_btn flaticon-shopping-bag"></a>
 
-								</li>
+                                </li>
 							</ul>
 						</div>
 	                </li>
@@ -157,7 +159,15 @@
 									<a class="tdu btn-fpswd float-right" href="#">Forgot Password?</a>
 								</div>
 								<button type="submit" class="btn btn-log btn-block btn-thm2">Login</button>
-								<hr>								
+								<hr>
+								<div class="row mt40">
+									<div class="col-lg">
+										<button type="submit" class="btn btn-block color-white bgc-fb"><i class="fa fa-facebook float-left mt5"></i> Facebook</button>
+									</div>
+									<div class="col-lg">
+										<button type="submit" class="btn btn-block color-white bgc-gogle"><i class="fa fa-google float-left mt5"></i> Google</button>
+									</div>
+								</div>
 							</form>
 						</div>
 				  	</div>
@@ -185,7 +195,15 @@
 									<label class="custom-control-label" for="exampleCheck2">Want to become an instructor?</label>
 								</div>
 								<button type="submit" class="btn btn-log btn-block btn-thm2">Register</button>
-								<hr>								
+								<hr>
+								<div class="row mt40">
+									<div class="col-lg">
+										<button type="submit" class="btn btn-block color-white bgc-fb"><i class="fa fa-facebook float-left mt5"></i> Facebook</button>
+									</div>
+									<div class="col-lg">
+										<button type="submit" class="btn btn-block color-white bgc-gogle"><i class="fa fa-google float-left mt5"></i> Google</button>
+									</div>
+								</div>
 							</form>
 						</div>
 				  	</div>
@@ -236,47 +254,64 @@
 			</div>
 		</div><!-- /.mobile-menu -->
 		<nav id="menu" class="stylehome1">
-			<li>
-		                <a href="#"><span class="title">Accueil</span></a>
-		                <!-- Level Two-->
-		                <ul>
-		                    <li><a href="Préparatoire.html">Préparatoire</a></li>
-		                    <li><a href="primaire.html">primaire</a></li>		           
-		                </ul>
-		                
-		            </li>
-		            <li>
-		                <a href="#"><span class="title">Qui somme nous</span></a>
-	                	<ul>
-		                    <li><a href="historique.html">historique</a></li>
-		                    <li><a href="palmarès.html">palmarès</a></li>
+			<ul>
+				<li><a href="#"><span class="title">Accueil</span></a>
+                        <!-- Level Two-->
+                        <ul>
+                            <li><a href="Préparatoire.html">Préparatoire</a></li>
+                            <li><a href="primaire.html">primaire</a></li>                  
+                        </ul>
+                        
+                    </li>
+                    <li>
+                        <a href="#"><span class="title">Qui somme nous</span></a>
+                        <ul>
+                            <li><a href="historique.html">historique</a></li>
+                            <li><a href="palmarès.html">palmarès</a></li>
                             <li><a href="staff.html">staff</a></li>
-	                	</ul>
-		            </li>
-		            <li>
-		                <a href="#"><span class="title">Vie scolaire</span></a>
-		                <ul>
-		                    <li><a href="#">Activités</a>
-		                    	<ul>
-		                    		<a href="Culturelle.html">Culturelle</a>
-		                    		<a href="Sportif.html">Sportif</a>
-		                    		<a href="Club.html">Club</a>
-		                    	</ul>
-		                    </li>
-		                    <li><a href="#">Services</a>
-		                    	<ul>
-		                    		<a href="Cantine.html">Cantine</a>
-		                    		<a href="Garderie.html">Garderie</a>
-		                    		<a href="Transport.html">Transport</a>
-		                    	</ul>
-		                    </li>
-		                    <li><a href="Evénements.html">Evénements</a></li>		                    
-		                    <li><a href="Excursions.html">Excursions</a></li>
-		                </ul>
-		            </li>
-		            <li>
-		                <a href="afficherproduit.php"><span class="title">store</span></a>		                
-		            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><span class="title">Vie scolaire</span></a>
+                        <ul>
+                            <li><a href="#">Activités</a>
+                                <ul>
+                                    <a href="Culturelle.html">Culturelle</a>
+                                    <a href="Sportif.html">Sportif</a>
+                                    <a href="Club.html">Club</a>
+                                </ul>
+                            </li>
+                            <li><a href="#">Services</a>
+                                <ul>
+                                    <a href="Cantine.html">Cantine</a>
+                                    <a href="Garderie.html">Garderie</a>
+                                    <a href="Transport.html">Transport</a>
+                                </ul>
+                            </li>
+                            <li><a href="Evénements.html">Evénements</a></li>                           
+                            <li><a href="Excursions.html">Excursions</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="afficherproduit.php"><span class="title">store</span></a>                      
+                    </li>
+         
+
+                </ul>
+                <ul class="sign_up_btn pull-right dn-smd mt20">
+                    <li class="list-inline-item list_s">
+                        <a href="#" class="btn flaticon-user" data-toggle="modal" data-target="#exampleModalCenter"> 
+                            <span class="dn-lg">Login/Register</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item list_s">
+                        <div class="cart_btn">
+                            <ul class="cart">
+                                <li>
+                                    <a href="afficherpanier.php" class="btn cart_btn flaticon-shopping-bag"></a>
+
+                                </li>
+			</ul>
 		</nav>
 	</div>
 
@@ -286,10 +321,10 @@
 			<div class="row">
 				<div class="col-xl-6 offset-xl-3 text-center">
 					<div class="breadcrumb_content">
-						<h4 class="breadcrumb_title">Shop</h4>
+						<h4 class="breadcrumb_title">Cart</h4>
 						<ol class="breadcrumb">
 						    <li class="breadcrumb-item"><a href="#">Home</a></li>
-						    <li class="breadcrumb-item active" aria-current="page">Shop</li>
+						    <li class="breadcrumb-item active" aria-current="page">Cart</li>
 						</ol>
 					</div>
 				</div>
@@ -297,64 +332,71 @@
 		</div>
 	</section>
 
-	<!-- Our Team Members -->
-	<section class="our-team pb50">
+	<!-- Shop Checkouts Content -->
+	<section class="shop-checkouts">
 		<div class="container">
 			<div class="row">
-				
 				<?php
-
-include '../core/produitC.php';/*pour chercher une fonction*/
-
-$crim = new produitC();
-$listcrim = $crim->afficherproduit();
-?>
-<table border="2">
-    <tr>
-      
-        <td>Nom</td>
-        <td>prix</td>
-        <td>description</td>
-        <td>nbProduit</td>
-        <td>IDProduit</td>
-
-    </tr>
-<?php
-
-foreach ($listcrim as $row)
-{
-    echo '
-        <tr>
-            
-            <td>'.$row["nom"].'</td>
-            <td>'.$row["prix"].'</td>
-            <td>'.$row["description"].'</td>
-            <td>'.$row["nbProduit"].'</td>
-            <td>'.$row["IDProduit"].'</td>
-
-            <td>
-                <form action="ajouterpanier.php" method="post">
-                    
-                    <input type="hidden" id="type" name="type" value="produit">
-                    <input type="hidden" id="CIN" name="CIN" value="0987663">
-                    <input type="hidden" id="IDProduit" name="IDProduit" value="'.$row["IDProduit"].'" >
-                    <input type="hidden" id="IDService" name="IDService" value="123">
-                     <input type="hidden" id="quantite" name="quantite" value="1">
-                     <input type="hidden" id="nomP" name="nomP" value="'.$row["nom"].'">
-                     <input type="hidden" id="prixP" name="prixP" value="'.$row["prix"].'">
-
-
-                    <input style="background: none; border: none; color: black; text-decoration: underline;" type="submit" value="Acheter">
-                </form>
-            </td>
-            
-        </tr>
-    ';
-}
-?>
-</table>
-	
-				
+					include '../core/produitsC.php';/*pour chercher une fonction*/
+					$crim = new panierC();
+					$listcrim = $crim->afficherpanier();
+				?>
+				<div class="col-md-12 col-lg-8 col-xl-8">
+					<div class="cart_page_form">
+						<form action="#">
+							<table class="table table-responsive">
+							  	<thead>
+								    <tr class="carttable_row">
+								    	<th class="cartm_title">Produit</th>
+								    	<th class="cartm_title">Prix</th>
+								    	<th class="cartm_title">Quantité</th>
+								    	<th class="cartm_title">Total</th>
+								    </tr>
+							  	</thead>
+							  	<?php
+					                foreach ($listcrim as $row)
+					                {
+					               ?>
+							  	<tbody class="table_body">
+								    <tr>
+								    	<th scope="row">
+								    		<ul class="cart_list">
+								    			<li class="list-inline-item pr15"><a href="#"><img src="images/shop/close.png" alt="close.png"></a></li>
+								    			<li class="list-inline-item pr20"><a href="#"><img src="images/shop/cart1.png" alt="cart1.png"></a></li>
+								    			<li class="list-inline-item"><a class="cart_title" href="#">Introduction Web Design <br> with HTML</a></li>
+								    		</ul>
+								    	</th>
+								    	<td>$99.00</td>
+								    	<td><input class="cart_count text-center" placeholder="4" type="number"></td>
+								    	<td class="cart_total">$499.00</td>
+								    </tr>								    
+							  	</tbody>
+							  <?php }	
+							  	?>
+							</table>
+						</form>
+					</div>
+					<div class="checkout_form">
+						<div class="checkout_coupon ui_kit_button">
+							<form class="form-inline">
+						    	<input class="form-control" type="search" placeholder="Coupon Code" aria-label="Search">
+						    	<button type="button" class="btn btn2">Apply Coupon</button>
+						    	<button type="button" class="btn btn3">Update Cart</button>
+						    </form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-xl-4">
+					<div class="order_sidebar_widget mb30">
+						<h4 class="title">Cart Totals</h4>
+						<ul>
+							<li class="subtitle"><p>Total <span class="float-right totals color-orose">$3,589.00</span></p></li>
+						</ul>
+					</div>
+					<div class="ui_kit_button payment_widget_btn">
+						<button type="button" class="btn dbxshad btn-lg btn-thm3 circle btn-block">Proceed To Checkout</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -366,10 +408,10 @@ foreach ($listcrim as $row)
 				<div class="col-sm-6 col-md-4 col-md-3 col-lg-3">
 					<div class="footer_contact_widget">
 						<h4>CONTACT</h4>
-						<p>19 Rue albanie, nasr 1 </p>
-						<p>1234 Tunis,Tunisie</p>
-						<p>+216 22 595 191 </p>
-						<p><a href="https://gmail.coms">wafahamdiboubahri@gmail.com</a></p>
+						<p>329 Queensberry Street, North Melbourne </p>
+						<p>VIC 3051, Australia.</p>
+						<p>123 456 7890</p>
+						<p><a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e0d0b0e0e110c0a3e1b1a0b1307501d1113">[email&#160;protected]</a></p>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
@@ -383,8 +425,49 @@ foreach ($listcrim as $row)
 						</ul>
 					</div>
 				</div>
-				
-			
+				<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
+					<div class="footer_program_widget">
+						<h4>PROGRAMS</h4>
+						<ul class="list-unstyled">
+							<li><a href="#">Nanodegree Plus</a></li>
+							<li><a href="#">Veterans</a></li>
+							<li><a href="#">Georgia</a></li>
+							<li><a href="#">Self-Driving Car</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
+					<div class="footer_support_widget">
+						<h4>SUPPORT</h4>
+						<ul class="list-unstyled">
+							<li><a href="#">Documentation</a></li>
+							<li><a href="#">Forums</a></li>
+							<li><a href="#">Language Packs</a></li>
+							<li><a href="#">Release Status</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-md-3 col-lg-3">
+					<div class="footer_apps_widget">
+						<h4>MOBILE</h4>
+						<div class="app_grid">
+							<button class="apple_btn btn-dark">
+								<span class="icon">
+									<span class="flaticon-apple"></span>
+								</span>
+								<span class="title">App Store</span>
+								<span class="subtitle">Available now on the</span>
+							</button>
+							<button class="play_store_btn btn-dark">
+								<span class="icon">
+									<span class="flaticon-google-play"></span>
+								</span>
+								<span class="title">Google Play</span>
+								<span class="subtitle">Get in on</span>
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -396,7 +479,7 @@ foreach ($listcrim as $row)
 				<div class="col-sm-4 col-md-3 col-lg-3 col-xl-2 pb15 pt15">
 					<div class="logo-widget home1">
 						<img class="img-fluid" src="images/header-logo.png" alt="header-logo.png">
-						<span>MARFAA</span>
+						<span>EDUMY</span>
 					</div>
 				</div>
 				<div class="col-sm-8 col-md-5 col-lg-6 col-xl-6 pb25 pt25 brdr_left_right">
@@ -432,7 +515,7 @@ foreach ($listcrim as $row)
 			<div class="row">
 				<div class="col-lg-6 offset-lg-3">
 					<div class="copyright-widget text-center">
-						<p>Copyright Marfaa © 2019. All Rights Reserved.</p>
+						<p>Copyright Edumy © 2019. All Rights Reserved.</p>
 					</div>
 				</div>
 			</div>
@@ -462,5 +545,5 @@ foreach ($listcrim as $row)
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 
-<!-- Mirrored from grandetest.com/theme/edumy-html/page-shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 14:50:48 GMT -->
+<!-- Mirrored from grandetest.com/theme/edumy-html/page-shop-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 14:50:49 GMT -->
 </html>

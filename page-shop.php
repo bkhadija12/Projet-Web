@@ -48,58 +48,111 @@
 		        <a href="#" class="navbar_brand float-left dn-smd">
 		            <img class="logo1 img-fluid" src="images/header-logo.png" alt="header-logo.png">
 		            <img class="logo2 img-fluid" src="images/header-logo2.png" alt="header-logo2.png">
-		            <span>Marfaa</span>
+		            <span>edumy</span>
 		        </a>
 		        <!-- Responsive Menu Structure-->
 		        <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
 		        <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
 		            <li>
-		                <a href="#"><span class="title">Accueil</span></a>
+		                <a href="#"><span class="title">Home</span></a>
 		                <!-- Level Two-->
-		                
-		            </li>
-		            <li>
-		                <a href="#"><span class="title">présentation de l’école</span></a>
-		                <!-- Level Two-->
-	                	<ul>
-		                    <li>
-		                        <a href="#">historique</a>
-		                        <!-- Level Three-->
-		                        
-		                    </li>
-		                    <li>
-		                        <a href="#">palmarès</a>
-		                        
-		                    </li>
-                            <li><a href="page-instructors.html">staff</a></li>
-	                	</ul>
-		            </li>
-		            <li>
-		                <a href="#"><span class="title">Vie scolaire</span></a>
 		                <ul>
-		                    <li><a href="#">Activités</a>
-		                    	<ul>
-		                    		<a href="page-event.html">Culturelle</a>
-		                    		<a href="page-event.html">sportif</a>
-		                    	</ul>
-		                    </li>
-		                    <li><a href="page-event-single.html">Evénements</a></li>
-		                    <li><a href="page-event-single.html">Journées à thèmes</a></li>
-		                    <li><a href="page-event-single.html">Excursions</a></li>
+		                    <li><a href="index-2.html">Home 1</a></li>
+		                    <li><a href="index2.html">Home 2</a></li>
+		                    <li><a href="index3.html">Home 3</a></li>
+		                    <li><a href="index4.html">Home 4</a></li>
+		                    <li><a href="index5.html">Home 5</a></li>
+		                    <li><a href="index6.html">Home - University</a></li>
+		                    <li><a href="index7.html">Home College</a></li>
+		                    <li><a href="index8.html">Home Kindergarten</a></li>
 		                </ul>
 		            </li>
 		            <li>
-		                <a href="#"><span class="title">Inscription</span></a>		                
+		                <a href="#"><span class="title">Courses</span></a>
+		                <!-- Level Two-->
+	                	<ul>
+		                    <li>
+		                        <a href="#">Courses List</a>
+		                        <!-- Level Three-->
+		                        <ul>
+		                            <li><a href="page-course-v1.html">Courses v1</a></li>
+		                            <li><a href="page-course-v2.html">Courses v2</a></li>
+		                            <li><a href="page-course-v3.html">Courses v3</a></li>
+		                        </ul>
+		                    </li>
+		                    <li>
+		                        <a href="#">Courses Single</a>
+		                        <!-- Level Three-->
+		                        <ul>
+		                            <li><a href="page-course-single-v1.html">Single V1</a></li>
+		                            <li><a href="page-course-single-v2.html">Single V2</a></li>
+		                            <li><a href="page-course-single-v3.html">Single V3</a></li>
+		                        </ul>
+		                    </li>
+                            <li><a href="page-instructors.html">Instructors</a></li>
+		                    <li><a href="page-instructors-single.html">Instructor Single</a></li>
+	                	</ul>
 		            </li>
-		 
-
+		            <li>
+		                <a href="#"><span class="title">Events</span></a>
+		                <ul>
+		                    <li><a href="page-event.html">Event List</a></li>
+		                    <li><a href="page-event-single.html">Event Single</a></li>
+		                </ul>
+		            </li>
+		            <li>
+		                <a href="#"><span class="title">Pages</span></a>
+		                <ul>
+				            <li>
+				                <a href="#"><span class="title">Shop Pages</span></a>
+				                <ul>
+				                    <li><a href="page-shop.html">Shop</a></li>
+				                    <li><a href="page-shop-single.html">Shop Single</a></li>
+				                    <li><a href="page-shop-cart.html">Cart</a></li>
+				                    <li><a href="page-shop-checkout.html">Checkout</a></li>
+				                    <li><a href="page-shop-order.html">Order</a></li>
+				                </ul>
+				            </li>
+				            <li>
+				                <a href="#"><span class="title">User Admin</span></a>
+				                <ul>
+				                    <li><a href="page-dashboard.html">Dashboard</a></li>
+				                    <li><a href="page-my-courses.html">My Courses</a></li>
+				                    <li><a href="page-my-order.html">My Order</a></li>
+				                    <li><a href="page-my-message.html">My Message</a></li>
+				                    <li><a href="page-my-review.html">My Review</a></li>
+				                    <li><a href="page-my-bookmarks.html">My Bookmarks</a></li>
+				                    <li><a href="page-my-listing.html">My Listing</a></li>
+				                    <li><a href="page-my-setting.html">My Setting</a></li>
+		                        </ul>
+				            </li>
+		                    <li><a href="page-about.html">About Us</a></li>
+		                    <li><a href="page-gallery.html">Gallery</a></li>
+		                    <li><a href="page-faq.html">Faq</a></li>
+		                    <li><a href="page-login.html">LogIn</a></li>
+		                    <li><a href="page-register.html">Register</a></li>
+		                    <li><a href="page-pricing.html">Membership</a></li>
+		                    <li><a href="page-error.html">404 Page</a></li>
+		                    <li><a href="page-terms.html">Terms and Conditions</a></li>
+		                    <li><a href="page-become-instructor.html">Become an Instructor</a></li>
+		                    <li><a href="page-ui-element.html">UI Elements</a></li>
+		                </ul>
+		            </li>
+		            <li>
+		                <a href="#"><span class="title">Blog</span></a>
+		                <ul>
+		                    <li><a href="page-blog-v1.html">Blog List 1</a></li>
+		                    <li><a href="page-blog-grid.html">Blog List 2</a></li>
+		                    <li><a href="page-blog-list.html">Blog List 3</a></li>
+		                    <li><a href="page-blog-single.html">Single Post</a></li>
+		                </ul>
+		            </li>
+		            <li class="last">
+		                <a href="page-contact.html"><span class="title">Contact</span></a>
+		            </li>
 		        </ul>
 		        <ul class="sign_up_btn pull-right dn-smd mt20">
-	                <li class="list-inline-item list_s">
-	                	<a href="#" class="btn flaticon-user" data-toggle="modal" data-target="#exampleModalCenter"> 
-	                		<span class="dn-lg">Login/Register</span>
-	                	</a>
-	                </li>
+	                <li class="list-inline-item list_s"><a href="#" class="btn flaticon-user" data-toggle="modal" data-target="#exampleModalCenter"> <span class="dn-lg">Login/Register</span></a></li>
 	                <li class="list-inline-item list_s">
 	                	<div class="cart_btn">
 							<ul class="cart">
@@ -107,59 +160,6 @@
 									<a href="#" class="btn cart_btn flaticon-shopping-bag"><span>5</span></a>
 									<ul class="dropdown_content">
 										<li class="list_content">
-											<?php
-											include '../core/produitsC.php';/*pour chercher une fonction*/
-
-											$crim = new panierC();
-											$listcrim = $crim->afficherpanier();
-											?>
-											<li>											
-											<?php
-											$D=date("Y-m-d H:i:s");
-
-
-											foreach ($listcrim as $row)
-											{
-											    echo '
-											        <tr>
-											            
-											            <td>'.$row["IDProduit"].'</td>
-											            <td>'.$row["type"].'</td>
-											            <td>'.$row["CIN"].'</td>
-											            <td>'.$row["IDService"].'</td>
-											            
-
-											            <td>
-											                <form action="supprimerpanier.php" method="get">
-											                    
-											                   
-											                    <input type="hidden" id="IDProduit" name="IDProduit" value="'.$row["IDProduit"].'" >
-											             
-
-											                    <input style="background: none; border: none; color: black; text-decoration: underline;" type="submit" value="Supprimer">
-											                </form>
-											            </td>
-											            
-											        </tr>
-
-											    ';
-											}
-											?>
-
-
-											</li>
-											<form action="ajoutercommande.php"  method="post">							                
-										                
-												<input type="hidden" id="prixTotal" name="prixTotal" value="25">
-												          
-										        <input type="hidden" id="etat" name="etat" value="EN ATTENTE DE CONFIRMATION">
-									            <input type="hidden" id="date" name="date" value="<?php echo $D ?>">
-								                <input type="hidden" id="CIN" name="CIN" value="0888">
-								                    <button style="position: relative;left: 880px ;bottom: 30px">
-								                	<input style="background: none; border: none; color: red; text-decoration: underline;" type="submit" value="Passer commande">
-													</button>
-											</form>
-
 											<a href="#">
 												<img class="float-left" src="http://via.placeholder.com/50x50" alt="50x50">
 												<p>Dolar Sit Amet</p>
@@ -239,7 +239,15 @@
 									<a class="tdu btn-fpswd float-right" href="#">Forgot Password?</a>
 								</div>
 								<button type="submit" class="btn btn-log btn-block btn-thm2">Login</button>
-								<hr>								
+								<hr>
+								<div class="row mt40">
+									<div class="col-lg">
+										<button type="submit" class="btn btn-block color-white bgc-fb"><i class="fa fa-facebook float-left mt5"></i> Facebook</button>
+									</div>
+									<div class="col-lg">
+										<button type="submit" class="btn btn-block color-white bgc-gogle"><i class="fa fa-google float-left mt5"></i> Google</button>
+									</div>
+								</div>
 							</form>
 						</div>
 				  	</div>
@@ -267,7 +275,15 @@
 									<label class="custom-control-label" for="exampleCheck2">Want to become an instructor?</label>
 								</div>
 								<button type="submit" class="btn btn-log btn-block btn-thm2">Register</button>
-								<hr>								
+								<hr>
+								<div class="row mt40">
+									<div class="col-lg">
+										<button type="submit" class="btn btn-block color-white bgc-fb"><i class="fa fa-facebook float-left mt5"></i> Facebook</button>
+									</div>
+									<div class="col-lg">
+										<button type="submit" class="btn btn-block color-white bgc-gogle"><i class="fa fa-google float-left mt5"></i> Google</button>
+									</div>
+								</div>
 							</form>
 						</div>
 				  	</div>
@@ -428,10 +444,98 @@
 	<section class="our-team pb50">
 		<div class="container">
 			<div class="row">
-				
+				<div class="col-md-12 col-lg-8 col-xl-9">
+					<div class="row">
+						<div class="col-sm-6 col-lg-6 col-xl-6">
+							<div class="instructor_search_result">
+								<p class="mt10 fz15"><span class="color-dark pr10">15 results</span> Showing 1–9 of</p>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-6 col-xl-6">
+							<div class="candidate_revew_select text-right tac-xsd mb25">
+								<ul>
+									<li class="list-inline-item">
+										<select class="selectpicker show-tick">
+											<option>Newly published</option>
+											<option>Recent</option>
+											<option>Old Review</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+</div>
+
+
+
+
+											<?php
+
+include '../core/produitC.php';
+$produit= new produitC();
+$listproduit = $produit->afficherproduit();
+?>
+
+
+
+
+<?php
+
+
+
+
+
+
+foreach ($listproduit as $row)
+{
+    echo '
+
+
 					
-					
-					
+						<div class="col-sm-6 col-lg-6 col-xl-4">
+							<div class="shop_grid">
+								<div class="thumb text-center">
+								<img src="'.$row["image"].'"" >
+									
+								</div>
+								<div class="details float-left">
+									<h4 class="price">'.$row["prix"].'</h4>
+									<h4 class="item-tile">'.$row["nom"].'</h4>
+									<h6 class="item-tile">'.$row["descrition"].'</h6>
+								</div>
+								<a class="cart_bag float-right" href="page-shop-single.html"><span class="flaticon-shopping-bag"></span></a>
+							</div>
+						</div>
+
+		';
+
+
+
+		}
+		?>			
+		
+						<div class="col-lg-12">
+							<div class="mbp_pagination mt20">
+								<ul class="page_navigation">
+								    <li class="page-item disabled">
+								    	<a class="page-link" href="#" tabindex="-1" aria-disabled="true"> <span class="flaticon-left-arrow"></span> Prev</a>
+								    </li>
+								    <li class="page-item"><a class="page-link" href="#">1</a></li>
+								    <li class="page-item active" aria-current="page">
+								    	<a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+								    </li>
+								    <li class="page-item"><a class="page-link" href="#">3</a></li>
+								    <li class="page-item"><a class="page-link" href="#">...</a></li>
+								    <li class="page-item"><a class="page-link" href="#">14</a></li>
+								    <li class="page-item">
+								    	<a class="page-link" href="#">Next <span class="flaticon-right-arrow-1"></span></a>
+								    </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -443,10 +547,10 @@
 				<div class="col-sm-6 col-md-4 col-md-3 col-lg-3">
 					<div class="footer_contact_widget">
 						<h4>CONTACT</h4>
-						<p>19 Rue albanie, nasr 1 </p>
-						<p>1234 Tunis,Tunisie</p>
-						<p>+216 22 595 191 </p>
-						<p><a href="https://gmail.coms">wafahamdiboubahri@gmail.com</a></p>
+						<p>329 Queensberry Street, North Melbourne </p>
+						<p>VIC 3051, Australia.</p>
+						<p>123 456 7890</p>
+						<p><a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e3909693938c9197a38687968e9acd808c8e">[email&#160;protected]</a></p>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
@@ -460,8 +564,49 @@
 						</ul>
 					</div>
 				</div>
-				
-			
+				<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
+					<div class="footer_program_widget">
+						<h4>PROGRAMS</h4>
+						<ul class="list-unstyled">
+							<li><a href="#">Nanodegree Plus</a></li>
+							<li><a href="#">Veterans</a></li>
+							<li><a href="#">Georgia</a></li>
+							<li><a href="#">Self-Driving Car</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
+					<div class="footer_support_widget">
+						<h4>SUPPORT</h4>
+						<ul class="list-unstyled">
+							<li><a href="#">Documentation</a></li>
+							<li><a href="#">Forums</a></li>
+							<li><a href="#">Language Packs</a></li>
+							<li><a href="#">Release Status</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-6 col-md-3 col-lg-3">
+					<div class="footer_apps_widget">
+						<h4>MOBILE</h4>
+						<div class="app_grid">
+							<button class="apple_btn btn-dark">
+								<span class="icon">
+									<span class="flaticon-apple"></span>
+								</span>
+								<span class="title">App Store</span>
+								<span class="subtitle">Available now on the</span>
+							</button>
+							<button class="play_store_btn btn-dark">
+								<span class="icon">
+									<span class="flaticon-google-play"></span>
+								</span>
+								<span class="title">Google Play</span>
+								<span class="subtitle">Get in on</span>
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -473,7 +618,7 @@
 				<div class="col-sm-4 col-md-3 col-lg-3 col-xl-2 pb15 pt15">
 					<div class="logo-widget home1">
 						<img class="img-fluid" src="images/header-logo.png" alt="header-logo.png">
-						<span>MARFAA</span>
+						<span>EDUMY</span>
 					</div>
 				</div>
 				<div class="col-sm-8 col-md-5 col-lg-6 col-xl-6 pb25 pt25 brdr_left_right">
@@ -509,7 +654,7 @@
 			<div class="row">
 				<div class="col-lg-6 offset-lg-3">
 					<div class="copyright-widget text-center">
-						<p>Copyright Marfaa © 2019. All Rights Reserved.</p>
+						<p>Copyright Edumy © 2019. All Rights Reserved.</p>
 					</div>
 				</div>
 			</div>

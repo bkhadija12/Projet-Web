@@ -451,16 +451,14 @@
 									</div>
 									<div class="my_setting_content_details pb0">
 										<div class="cart_page_form style2">
-											<form action="#">
 												<table class="table table-responsive">
 												  	<thead>
 													    <tr class="carttable_row">
-													    	<th class="cartm_title">IDCommande</th>
-					                                        <th class="cartm_title">Date</th>
-					                                        <th class="cartm_title">Description</th>
+													    	<th class="cartm_title">produit</th>
 					                                        <th class="cartm_title">prix</th>
+					                                        <th class="cartm_title">Description</th>
 					                                        <th class="cartm_title">Date</th>
-					                                        <th class="cartm_title">Annulation</th>										   	
+					                                        <th class="cartm_title">Action</th>
 													    </tr>
 												  	</thead>
 												  	 <?php
@@ -468,126 +466,60 @@
 									                $crim = new commandeC();
 									                $listcrim = $crim->affichercommande();
 									                ?>
+												<tbody class="table_body">
+
 												  	<?php
 					                                foreach ($listcrim as $row)
 					                                {
-					                                echo '
-												  	<tbody class="table_body">
+					                                	$et='<spam class="badge badge-success">valider</spam>';
+					                                	$confBtn='<input class="btn btn-info" type="submit" value="confirmer" disabled />';
+
+					                                	if ($row["etat"]==0)
+					                                	{
+					                                		$et='<spam class="badge badge-warning">en attente</spam>';
+					                                		$confBtn='<input class="btn btn-info" type="submit" value="confirmer" />';
+					                                	}
+					                                ?>
 													    <tr>
-													    	<th scope="row">
+													    	<td scope="row">
 													    		<ul class="cart_list">
 													    			<li class="list-inline-item pr20"><a href="#"><img src="images/shop/cart1.png" alt="cart1.png"></a></li>
-													    			<li class="list-inline-item"><a class="cart_title" href="#">'.$row["IDCommande"].'</a></li>
+													    			<li class="list-inline-item"><a class="cart_title" href="#"></a></li>
 													    		</ul>
-													    	</th>
-													    	<td>'.$row["date"].'
-							                                    <form action="modifiercommande.php" method="get">
+													    	</td>
+													    	<td><?php echo $row["prixTotal"]; ?>DT</td>
+													    	<td name="etat">'.$et.'
+													    	</td>
+													    	<td class="cart_total"><?php echo $row["date"] ?>'</td>
+													    	<td class="text-thm tdu">
+													    		<form action="modifiercommande.php" method="POST">
 							                                                                  
-							                                        <input type="hidden" id="etat" name="etat" value="confirmer">
-							                                        <input type="hidden" id="CIN" name="CIN" value="0987663">
-							                                        <input type="hidden" id="IDCommande" name="IDCommande" value="'.$row["IDCommande"].'" >
-							                                        <input type="hidden" id="date" name="date" value="'.$row["date"].'">
-							                                        <input style="background: none; border: none; color: blue; text-decoration: underline;" type="submit" value="modifier">
+							                                        <input type="hidden" id="IDCommande" name="IDCommande" value='<?php echo $row["IDCommande"]; ?>' />
+							                                       <?php echo $confBtn; ?>
 
 							                                    </form>
-							                                </td>
-													    	<td>'.$row["etat"].'</td>
-													    	<td class="cart_total">'.$row["prixTotal"].'dt</td>
-													    	<td class="text-thm tdu">
-													    		
 													    	</td>
-					                                        <td class="text-thm tdu">
 
-													    		<form action="supprimercommande.php" method="get">
-                                                                
-					                                            <input type="hidden" id="etat" name="etat" value="confirmer">
-					                                            <input type="hidden" id="CIN" name="CIN" value="0987663">
-					                                            <input type="hidden" id="IDCommande" name="IDCommande" value="'.$row["IDCommande"].'" >
-					                                            <input type="hidden" id="date" name="date" value="'.$row["date"].'">
-
-					                                            <input style="background: none; border: none; color: red; text-decoration: underline;" type="submit" value="Supprimer">
-					                                        </form></td>
+					                                        
 													    </tr>
-													    ';
-													    }
+													   
+													    <?php
+
+													}
+
 													    ?>
-													    <a href="../print.php">imprimer</a>
 												  	</tbody>
 												</table>
-											</form>
 										</div>
 									</div>
+
+
 									<div class="my_setting_content_header pt0">
 										<div class="my_sch_title">
-											<h4 class="m0">Order Details</h4>
+											<h4 class="m0" style="text-decoration: underline;"><a href="../print.php">Imprimer</a></h4>
 										</div>
 									</div>
-									<div class="my_setting_content_details">
-										<ul class="order_key_status mb0">
-											<li>Order key <span>ORDER5C78E5C9B55A1</span></li>
-											<li>Order status <span>Completed</span></li>
-										</ul>
-									</div>
-									<div class="my_setting_content_details">
-										<div class="cart_page_form style3">
-											<form action="#">
-												<table class="table table-responsive">
-												  	<thead>
-													    <tr class="carttable_row">
-													    	<th class="cartm_title">Item</th>
-													    	<th class="cartm_title">Ordered</th>
-													    	<th class="cartm_title">Coupon Code</th>
-													    	<th class="cartm_title">Quantity</th>
-													    	<th class="cartm_title">Price</th>
-													    	<th class="cartm_title">Amount</th>
-													    </tr>
-												  	</thead>
-												  	<tbody class="table_body">
-													    <tr>
-													    	<th scope="row">
-													    		<ul class="cart_list">
-													    			<li class="list-inline-item"><a class="cart_title" href="#">Introduction Web Design with HTML</a></li>
-													    		</ul>
-													    	</th>
-													    	<td>01/03/2019</td>
-													    	<td>SNUGGLE202</td>
-													    	<td>1</td>
-													    	<td class="cart_total">$259.00</td>
-													    	<td class="">$2,590.00</td>
-													    </tr>
-													    <tr>
-													    	<th scope="row">
-													    		<ul class="cart_list">
-													    			<li class="list-inline-item"><a class="cart_title" href="#">Designing a Responsive Mobile Website with Muse</a></li>
-													    		</ul>
-													    	</th>
-													    	<td>01/03/2019</td>
-													    	<td>SNUGGLE202</td>
-													    	<td>1</td>
-													    	<td class="cart_total">$259.00</td>
-													    	<td class="">$2,590.00</td>
-													    </tr>
-													    <tr class="borderless_table_row">
-													    	<th scope="row"></th>
-													    	<td></td>
-													    	<td></td>
-													    	<td></td>
-													    	<td class="cart_total color-dark fz18 pb10">Total</td>
-													    	<td class="color-gray2 fz15 pb10">$2,590.00</td>
-													    </tr>
-													    <tr class="borderless_table_row style2">
-													    	<th scope="row"></th>
-													    	<td></td>
-													    	<td></td>
-													    	<td></td>
-													    	<td class="cart_total color-dark fz18 pt10">Total Paid</td>
-													    	<td class="color-gray2 fz15 pt10">$3,590.00</td>
-													    </tr>
-												  	</tbody>
-												</table>
-											</form>
-										</div>
-									</div>
+									
 								</div>
 							</div>
 						</div>
