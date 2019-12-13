@@ -2,8 +2,8 @@
 include "../core/produitC.php";
 
 if(isset($_POST['modifier']))
-
-$id=$_POST["id"];
+{
+$id=$_POST["idproduit"];
 $nom=$_POST["nom"];
 $nbproduit=$_POST["nbproduit"];
 $prix=$_POST["prix"];
@@ -12,4 +12,5 @@ $image=$_POST["image"];
 
 $produit=new produitC();
 $produit->modifierProduit($id,$nom,$nbproduit,$prix,$description,$image);
-header("location:afficherProduit.php");
+header("location:page-my-bookmarks.php");
+}

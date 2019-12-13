@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
-<!-- Mirrored from grandetest.com/theme/edumy-html/page-shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 14:50:46 GMT -->
+<!-- Mirrored from grandetest.com/theme/edumy-html/page-shop-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 14:50:48 GMT -->
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -315,16 +315,16 @@
 				<ul class="menu_bar_home2">
 					<li class="list-inline-item">
 	                	<div class="search_overlay">
-						  <a id="search-button-listener2" class="mk-search-trigger mk-fullscreen-trigger" href="#">
-						    <div id="search-button2"><i class="flaticon-magnifying-glass"></i></div>
-						  </a>
+						  	<a id="search-button-listener2" class="mk-search-trigger mk-fullscreen-trigger" href="#">
+						   		<div id="search-button2"><i class="flaticon-magnifying-glass"></i></div>
+						  	</a>
 							<div class="mk-fullscreen-search-overlay" id="mk-search-overlay2">
 							    <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button2"><i class="fa fa-times"></i></a>
 							    <div id="mk-fullscreen-search-wrapper2">
-							      <form method="get" id="mk-fullscreen-searchform2">
-							        <input type="text" value="" placeholder="Search courses..." id="mk-fullscreen-search-input2">
-							        <i class="flaticon-magnifying-glass fullscreen-search-icon"><input value="" type="submit"></i>
-							      </form>
+							      	<form method="get" id="mk-fullscreen-searchform2">
+							        	<input type="text" value="" placeholder="Search courses..." id="mk-fullscreen-search-input2">
+							        	<i class="flaticon-magnifying-glass fullscreen-search-icon"><input value="" type="submit"></i>
+							      	</form>
 							    </div>
 							</div>
 						</div>
@@ -429,215 +429,118 @@
 			<div class="row">
 				<div class="col-xl-6 offset-xl-3 text-center">
 					<div class="breadcrumb_content">
-						<h4 class="breadcrumb_title">Shop</h4>
+						<h4 class="breadcrumb_title">Shop sıngle</h4>
 						<ol class="breadcrumb">
 						    <li class="breadcrumb-item"><a href="#">Home</a></li>
-						    <li class="breadcrumb-item active" aria-current="page">Shop</li>
+						    <li class="breadcrumb-item active" aria-current="page">Shop sıngle</li>
 						</ol>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-									<h1 class="item-tile"><a href="Print.php">imprimer</a></h1>
 
-
-											<?php
-$bdd = new PDO("mysql:host=127.0.0.1;dbname=dbproject;charset=utf8", "root", "");
-$videosParPage = 3;
-
-
-
-
-
-$videosTotalesReq = $bdd->query('SELECT IDProduit FROM produits ');
-$videosTotales = $videosTotalesReq->rowCount();
-$pagesTotales = ceil($videosTotales/$videosParPage);
-if(isset($_GET['page']) AND !empty($_GET['page']) AND $_GET['page'] > 0 AND $_GET['page'] <= $pagesTotales) {
-   $_GET['page'] = intval($_GET['page']);
-   $pageCourante = $_GET['page'];
-} else {
-   $pageCourante = 1;
-}
-$depart = ($pageCourante-1)*$videosParPage;
-
- $produits = $bdd->query('SELECT * FROM produits ORDER BY IDProduit DESC LIMIT '.$depart.','.$videosParPage);
-
-?>
-
-	<!-- Our Team Members -->
-	<section class="our-team pb50">
+	<!-- Shop Single Content -->
+	<section class="shop-single-content pb0">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 col-lg-8 col-xl-9">
-					<div class="row">
-						<div class="col-sm-6 col-lg-6 col-xl-6">
-							<div class="instructor_search_result">
-								<p class="mt10 fz15"><span class="color-dark pr10"><?php echo $videosParPage ?> results</span> <?php echo $videosParPage.'-' . $videosTotales ?> of</p>
+				<div class="col-lg-6 col-xl-6">
+					<div class="single_product_grid">
+						<div class="single_product_slider">
+							<div class="item">
+								<div class="single_product">
+									<div class="single_item">
+										<div class="thumb"><img class="img-fluid" src="<?php echo $_POST['image']; ?>" alt="ss1.png"></div>
+									</div>
+									<a class="product_popup popup-img" href="<?php echo $_POST['image']; ?>"><span class="flaticon-zoom-in"></span></a>
+								</div>
 							</div>
-						</div>
-						<div class="col-sm-6 col-lg-6 col-xl-6">
-							<div class="candidate_revew_select text-right tac-xsd mb25">
-								<ul>
-									<li class="list-inline-item">
-										<form method="GET">
-										<select class="selectpicker show-tick">
-											<option>Newly published</option>
-											<option>Recent</option>
-											<option>Old Review</option>
-										</select>
-										<input type="text" name="b" placeholder="fyh">
-										<input type="submit" name="b" placeholder="fyh">
-										</form>
-									</li>
-								</ul>
+							
+							<div class="item">
+								<div class="single_product">
+									<div class="single_item">
+										<div class="thumb"><img class="img-fluid" src="<?php echo $_POST['image']; ?>" alt="ss1.png"></div>
+									</div>
+									<a class="product_popup popup-img" href="<?php echo $_POST['image']; ?>"><span class="flaticon-zoom-in"></span></a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="single_product">
+									<div class="single_item">
+										<div class="thumb"><img class="img-fluid" src="<?php echo $_POST['image']; ?>" alt="ss1.png"></div>
+									</div>
+									<a class="product_popup popup-img" href="<?php echo $_POST['image']; ?>"><span class="flaticon-zoom-in"></span></a>
+								</div>
+							</div>
+							<div class="item">
+								<div class="single_product">
+									<div class="single_item">
+										<div class="thumb"><img class="img-fluid" src="<?php echo $_POST['image']; ?>" alt="ss1.png"></div>
+									</div>
+									<a class="product_popup popup-img" href="<?php echo $_POST['image']; ?>"><span class="flaticon-zoom-in"></span></a>
+								</div>
 							</div>
 						</div>
 					</div>
-</div>
-
-<style type="text/css">
-	
-
-	.zoom {
-width: 320px;
-height: 240px;
-}
-.image {
-width: 100%;
-height: 100%;
-}
-.image img {
-/* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
--webkit-transition: all 1s ease; /* Safari et Chrome */
--moz-transition: all 1s ease; /* Firefox */
--ms-transition: all 1s ease; /* Internet Explorer 9 */
--o-transition: all 1s ease; /* Opera */
-transition: all 1s ease;
-}
-.image:hover img {
-/* L'image est grossie de 25% */
--webkit-transform:scale(1.25); /* Safari et Chrome */
--moz-transform:scale(1.25); /* Firefox */
--ms-transform:scale(1.25); /* Internet Explorer 9 */
--o-transform:scale(1.25); /* Opera */
-transform:scale(1.25);
-}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
-
-
-
-
-
-
-while($prod = $produits->fetch())
-{
-    echo '
-
-
+				</div>
+				<div class="col-lg-6 col-xl-6">
+					<div class="shop_single_product_details">
+						<h3 class="title">Details about the product</h3>
 					
-						<div class="col-sm-6 col-lg-6 col-xl-4">
-							<div class="shop_grid">
-								<div class="thumb text-center">
-								<div class="zoom">
-								<div class="image">
-								<img src="'.$prod['image'].'" >	
+						<h4 class="title"><?php echo $_POST['nom'] ?></h4>
+						<div class="sspd_price mb25"><?php echo $_POST['prix'] ?></div>
+						<ul class="cart_btns ui_kit_button mb30">
+							<li class="list-inline-item"><input placeholder="4" type="number"></li>
+							<li class="list-inline-item"><button type="button" class="btn"><span class="flaticon-shopping-bag pr5 fz20"></span> Add To Cart</button></li>
+						</ul>
+						<ul class="sspd_sku mb30">
+							
+							<li><a href="#">Category: Languages</a></li>
+							
+						</ul>
+						<ul class="sspd_social_icon">
+							<li class="list-inline-item">Share:</li>
+							<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+							<li class="list-inline-item"><a href="#"><i class="fa fa-google"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="shop_single_tab_content mt40">
+						<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+							<li class="nav-item">
+							    <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+							</li>
+							
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+								<div class="product_single_content">
+									<div class="mbp_pagination_comments">
+										<div class="mbp_first media">
+											<div class="media-body pb45">
+										    	
+										    	<p class="mb25 mt10"><?php echo $_POST['description'] ?></p>
+										    	
+											</div>
+										</div>
+									</div>
 								</div>
-								</div>	
-								</div>
-								<div class="details float-left">
-									<h4 class="price">'.$prod["prix"].'</h4>
-									<h4 class="item-tile">'.$prod["nom"].'</h4>
-									<h6 class="item-tile">'.$prod["descrition"].'</h6>
-								</div>
-								<form method="POST" action="page-shop-single.php">
-<input type="hidden" id="id" name="id" value="'.$prod["IDProduit"].'">
-                    <input type="hidden" id="nom" name="nom" value="'.$prod["nom"].'">
-                    <input type="hidden" id="nb" name="nb" value="'.$prod["nbProduit"].'">
-                    <input type="hidden" id="prix" name="prix" value="'.$prod["prix"].'">
-                    <input type="hidden" id="description" name="description" value="'.$prod["descrition"].'">
-                    <input type="hidden" id="image" name="image" value="'.$prod["image"].'">
-								<div class="cart_bag float-right"><span><input class="flaticon-shopping-bag" type="submit" name="a" value="."></span></div>
-								</form>
 							</div>
-						</div>
-
-		';
-
-
-
-		}
-		?>	
-
-
-		<?php
-      for($i=1;$i<=$pagesTotales;$i++) {
-      	$k=$i+1;
-      	$p=$i-1;
-         if($i == $pageCourante) {
-         	echo '<div class="page-item active" aria-current="page">';
-         	echo '<p class="page-link">';
-         	echo '<span class="sr-only">(current)</span>';
-            echo $i.' ';
-            echo '</p>';
-            echo '</div>';
-         } else {
-         	echo '<div class="page-item">';
-            echo '<a class="page-link" href="page-shop.php?page='.$i.'">'.$i.'</a> ';
-            echo '</div>';
-         }
-         
-
-
-      }
-
- echo'<div class="page-link" href="page-shop.php?page='.$i.'" tabindex="-1" aria-disabled="true"> ';
-          echo'<span class="flaticon-left-arrow"></span> Prev';
-
-         echo '</div>';
-
-      ?>		
-		
-						<div class="col-lg-12">
-							<div class="mbp_pagination mt20">
-								<ul class="page_navigation">
-								    <li class="page-item disabled">
-								    	<a class="page-link" href="#" tabindex="-1" aria-disabled="true"> <span class="flaticon-left-arrow"></span> Prev</a>
-								    </li>
-								    <li class="page-item"><a class="page-link" href="#">1</a></li>
-								    <li class="page-item active" aria-current="page">
-								    	<a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-								    </li>
-								    <li class="page-item"><a class="page-link" href="#">3</a></li>
-								    <li class="page-item"><a class="page-link" href="#">...</a></li>
-								    <li class="page-item"><a class="page-link" href="#">14</a></li>
-								    <li class="page-item">
-								    	<a class="page-link" href="#">Next <span class="flaticon-right-arrow-1"></span></a>
-								    </li>
-								</ul>
-							</div>
+							
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<!-- Our Product -->
+	
 
 	<!-- Our Footer -->
 	<section class="footer_one">
@@ -649,7 +552,7 @@ while($prod = $produits->fetch())
 						<p>329 Queensberry Street, North Melbourne </p>
 						<p>VIC 3051, Australia.</p>
 						<p>123 456 7890</p>
-						<p><a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e3909693938c9197a38687968e9acd808c8e">[email&#160;protected]</a></p>
+						<p><a href="https://grandetest.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b8cbcdc8c8d7caccf8dddccdd5c196dbd7d5">[email&#160;protected]</a></p>
 					</div>
 				</div>
 				<div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
@@ -769,6 +672,7 @@ while($prod = $produits->fetch())
 <script type="text/javascript" src="js/jquery.mmenu.all.js"></script>
 <script type="text/javascript" src="js/ace-responsive-menu.js"></script>
 <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="js/isotop.js"></script>
 <script type="text/javascript" src="js/snackbar.min.js"></script>
 <script type="text/javascript" src="js/simplebar.js"></script>
 <script type="text/javascript" src="js/parallax.js"></script>
@@ -783,5 +687,5 @@ while($prod = $produits->fetch())
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 
-<!-- Mirrored from grandetest.com/theme/edumy-html/page-shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 14:50:48 GMT -->
+<!-- Mirrored from grandetest.com/theme/edumy-html/page-shop-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Nov 2019 14:50:48 GMT -->
 </html>

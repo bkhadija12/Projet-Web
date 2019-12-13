@@ -1,6 +1,6 @@
 <?php
 // including database connection
-require 'configg.php';
+include '../config.php';
 ?>
 
 <html>
@@ -9,31 +9,50 @@ require 'configg.php';
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
 <style></style>
 </head>
-<body body onload="window.print()">
-	<center>
+html>
+<body onload="window.print()">
 <?php
-                $sqli = mysqli_query($link,"SELECT * FROM `commandes` ORDER BY IDCommande");
-                           echo "<table border='1' width='100%' class='table table-bordered table-striped'>";
-                            echo "<thead>";
-                            echo "<tr>";
-                            echo "<th>IDCommande</th>";
-                            echo "<th>Prix</th>";
-                            echo "<th>Description   </th>";
-                            echo "<th>Date </th>";
-                            echo "</tr>";
-                            echo "</thead>";
-                            echo "<tbody>";
-                            while($row = mysqli_fetch_array($sqli)){
-                            echo "<tr>";
-                            echo "<td>" . $row['IDCommande'] . "</td>";
-                            echo "<td>" . $row['prixTotal'] . "</td>";
-                            echo "<td>" . $row['etat'] . "</td>";
-                            echo "<td>" . $row['date'] . "</td>";
-                            echo "</tr>";
-                            }
-                            echo "</tbody>";
-                            echo "</table>";
-?>
-</center>
+$bdd = new PDO("mysql:host=127.0.0.1;dbname=dbproject;charset=utf8", "root", "");
+ $produits = $bdd->query('SELECT * FROM produits ORDER BY IDProduit ');
+
+while($prod = $produits->fetch())
+{
+    echo '
+
+
+                    
+                        <div class="col-sm-6 col-lg-6 col-xl-4">
+                            <div class="shop_grid">
+                                <div class="thumb text-center">
+                                <div class="zoom">
+                                <div class="image">
+                                <img src="'.$prod['image'].'" > 
+                                </div>
+                                </div>  
+                                </div>
+                                <div class="details float-left">
+                                    <h4 class="price">'.$prod["prix"].'</h4>
+                                    <h4 class="item-tile">'.$prod["nom"].'</h4>
+                                    <h6 class="item-tile">'.$prod["descrition"].'</h6>
+                                </div>
+                                <form method="POST" action="page-shop-single.php">
+<input type="hidden" id="id" name="id" value="'.$prod["IDProduit"].'">
+                    <input type="hidden" id="nom" name="nom" value="'.$prod["nom"].'">
+                    <input type="hidden" id="nb" name="nb" value="'.$prod["nbProduit"].'">
+                    <input type="hidden" id="prix" name="prix" value="'.$prod["prix"].'">
+                    <input type="hidden" id="description" name="description" value="'.$prod["descrition"].'">
+                    <input type="hidden" id="image" name="image" value="'.$prod["image"].'">
+                                <div class="cart_bag float-right"><span><input class="flaticon-shopping-bag" type="submit" name="a" value="."></span></div>
+                                </form>
+                            </div>
+                        </div>
+
+        ';
+
+
+
+        }
+        ?>
+
 </body>
 </html>

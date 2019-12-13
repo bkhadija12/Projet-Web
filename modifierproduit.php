@@ -91,7 +91,7 @@ document.myform.id.style.background-Color="red";
         
         </tr>
         <tr>
-            <td><input type="submit" name="modifier" value="Modifier"></td>
+            <td><input type="submit" name="modifier" value="Modifier" onclick="test()"></td>
         </tr>
     </table>
 </form>
